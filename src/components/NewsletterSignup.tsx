@@ -95,61 +95,61 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
 
   if (variant === 'hero') {
     return (
-      <Card className={`${className} bg-white/10 border-white/20 backdrop-blur-sm`}>
-        <CardContent className="p-6">
-          <div className="text-center mb-6">
-            <Mail className="h-10 w-10 text-white mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">
-              Stay Updated with Medicare Changes
-            </h3>
-            <p className="text-white/90">
-              Get the latest training updates, compliance news, and exclusive content delivered to your inbox.
-            </p>
+      <div className={`${className} bg-white border border-gray-200 rounded-lg shadow-lg p-8`}>
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            Try out our free AI Training Tool
+          </h3>
+          <p className="text-gray-600">
+            Get started with professional Medicare training in minutes
+          </p>
+        </div>
+        
+        <form onSubmit={handleSubscribe} className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Input
+              type="text"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              className="border-gray-300 text-gray-900 placeholder:text-gray-500"
+            />
+            <Input
+              type="text"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="border-gray-300 text-gray-900 placeholder:text-gray-500"
+            />
           </div>
-          
-          <form onSubmit={handleSubscribe} className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input
-                type="text"
-                placeholder="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
-              />
-              <Input
-                type="text"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
-              />
-            </div>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
-              />
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="bg-white text-primary hover:bg-white/90 shrink-0"
-              >
-                {isSubmitting ? (
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
-                ) : (
-                  <>
-                    Subscribe <ArrowRight className="h-4 w-4 ml-2" />
-                  </>
-                )}
-              </Button>
-            </div>
-          </form>
-        </CardContent>
-      </Card>
+          <div className="flex gap-2">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="border-gray-300 text-gray-900 placeholder:text-gray-500 flex-1"
+            />
+            <Button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="bg-blue-600 hover:bg-blue-700 text-white shrink-0"
+            >
+              {isSubmitting ? (
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+              ) : (
+                <>
+                  Create free AI training <ArrowRight className="h-4 w-4 ml-2" />
+                </>
+              )}
+            </Button>
+          </div>
+          <p className="text-xs text-gray-500 text-center">
+            Political, inappropriate and discriminatory content will not be approved.
+          </p>
+        </form>
+      </div>
     );
   }
 
@@ -195,63 +195,65 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
   }
 
   return (
-    <Card className={className}>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Mail className="h-6 w-6 text-primary" />
+    <div className={`${className} bg-card backdrop-blur-sm border border-border rounded-2xl shadow-card p-8`}>
+      <div className="text-center mb-8">
+        <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <Mail className="h-8 w-8 text-primary-foreground" />
+        </div>
+        <h3 className="text-2xl font-bold text-foreground mb-2">
           Stay Informed with Our Newsletter
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+        </h3>
         <p className="text-muted-foreground">
           Get the latest Medicare updates, training materials, and exclusive content delivered directly to your inbox.
         </p>
-        
-        <form onSubmit={handleSubscribe} className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Input
-              type="text"
-              placeholder="First Name (optional)"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <Input
-              type="text"
-              placeholder="Last Name (optional)"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-          </div>
-          <div className="flex gap-2">
-            <Input
-              type="email"
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1"
-            />
-            <Button 
-              type="submit" 
-              disabled={isSubmitting}
-              className="shrink-0"
-            >
-              {isSubmitting ? (
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              ) : (
-                <>
-                  Subscribe <ArrowRight className="h-4 w-4 ml-2" />
-                </>
-              )}
-            </Button>
-          </div>
-        </form>
-        
-        <p className="text-xs text-muted-foreground">
-          We respect your privacy. Unsubscribe at any time.
-        </p>
-      </CardContent>
-    </Card>
+      </div>
+      
+      <form onSubmit={handleSubscribe} className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Input
+            type="text"
+            placeholder="First Name (optional)"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            className="border-border focus:border-primary focus:ring-primary rounded-xl"
+          />
+          <Input
+            type="text"
+            placeholder="Last Name (optional)"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            className="border-border focus:border-primary focus:ring-primary rounded-xl"
+          />
+        </div>
+        <div className="flex gap-3">
+          <Input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="flex-1 border-border focus:border-primary focus:ring-primary rounded-xl"
+          />
+          <Button 
+            type="submit" 
+            disabled={isSubmitting}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 shrink-0"
+          >
+            {isSubmitting ? (
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-foreground"></div>
+            ) : (
+              <>
+                Subscribe <ArrowRight className="h-4 w-4 ml-2" />
+              </>
+            )}
+          </Button>
+        </div>
+      </form>
+      
+      <p className="text-xs text-muted-foreground text-center mt-6">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
   );
 };
 
