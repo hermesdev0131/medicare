@@ -27,6 +27,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
         title: "Error",
         description: "Please enter your email address",
         variant: "destructive",
+        className: "bg-red-50 border-red-200 text-red-800",
       });
       return;
     }
@@ -51,6 +52,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
             title: "Already Subscribed",
             description: "This email is already subscribed to our newsletter",
             variant: "default",
+            className: "bg-blue-50 border-blue-200 text-blue-800",
           });
         } else {
           throw error;
@@ -60,6 +62,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
         toast({
           title: "Success!",
           description: "You've been subscribed to our newsletter",
+          className: "bg-green-50 border-green-200 text-green-800",
         });
       }
       
@@ -71,27 +74,28 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
         title: "Error",
         description: "Failed to subscribe. Please try again.",
         variant: "destructive",
+        className: "bg-red-50 border-red-200 text-red-800",
       });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  if (isSubscribed) {
-    return (
-      <Card className={`${className} bg-gradient-to-r from-success/10 to-success/5 border-success/20`}>
-        <CardContent className="p-6 text-center">
-          <CheckCircle className="h-12 w-12 text-success mx-auto mb-4" />
-          <h3 className="text-lg font-semibold text-success mb-2">
-            Thank You for Subscribing!
-          </h3>
-          <p className="text-muted-foreground">
-            You'll receive updates about new training materials, Medicare changes, and exclusive content.
-          </p>
-        </CardContent>
-      </Card>
-    );
-  }
+  // if (isSubscribed) {
+  //   return (
+  //     <Card className={`${className} bg-gradient-to-r from-success/10 to-success/5 border-success/20`}>
+  //       <CardContent className="p-6 text-center">
+  //         <CheckCircle className="h-12 w-12 text-success mx-auto mb-4" />
+  //         <h3 className="text-lg font-semibold text-success mb-2">
+  //           Thank You for Subscribing!
+  //         </h3>
+  //         <p className="text-muted-foreground">
+  //           You'll receive updates about new training materials, Medicare changes, and exclusive content.
+  //         </p>
+  //       </CardContent>
+  //     </Card>
+  //   );
+  // }
 
   if (variant === 'hero') {
     return (

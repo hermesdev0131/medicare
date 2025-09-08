@@ -6,7 +6,7 @@ const Hero = () => {
   const features = ['Expert-crafted Medicare training programs', 'Live instructor-led webinars', 'Comprehensive LMS platform'];
   
   return (
-    <section className="relative overflow-hidden py-12 lg:py-20">
+    <section className="relative overflow-hidden py-20 lg:py-32">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
