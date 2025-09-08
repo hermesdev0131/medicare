@@ -2,7 +2,6 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import PricingCards from '@/components/PricingCards';
 import Footer from '@/components/Footer';
-import NewsletterSignup from '@/components/NewsletterSignup';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,9 +18,10 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/1e40af/ffffff?text=MSI",
       backgroundImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "The Training Department has revolutionized how we onboard new Medicare agents. The platform is intuitive and our success rates have increased by 40%.",
+      quote: "It's easy to use and grows across teams fast.",
       speaker: "Sarah Johnson",
-      jobTitle: "VP of Training"
+      jobTitle: "Solution Manager IT",
+      category: "IT"
     },
     {
       id: 2,
@@ -29,9 +29,10 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/059669/ffffff?text=PM",
       backgroundImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "What used to take 4 hours now takes 30 minutes. Our sales team is more confident and effective than ever before.",
+      quote: "What used to take 4 hours now takes 30 minutes.",
       speaker: "Michael Chen",
-      jobTitle: "Director of Sales Training"
+      jobTitle: "Global Sales Enablement Lead",
+      category: "SALES ENABLEMENT"
     },
     {
       id: 3,
@@ -39,9 +40,10 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/dc2626/ffffff?text=ME",
       backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "The platform is so easy to use and intuitive. Our compliance rates have improved dramatically since implementation.",
+      quote: "The platform makes change management use and implementation seamless.",
       speaker: "Jennifer Martinez",
-      jobTitle: "Chief Operations Officer"
+      jobTitle: "Change Management Director",
+      category: "CHANGE MANAGEMENT"
     },
     {
       id: 4,
@@ -49,9 +51,10 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/7c3aed/ffffff?text=MP",
       backgroundImage: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "We make training fast and use them every day. The ROI has been incredible for our organization.",
+      quote: "We make training fast and use them every day. The ROI has been incredible.",
       speaker: "David Thompson",
-      jobTitle: "Head of Learning & Development"
+      jobTitle: "Head of Learning & Development",
+      category: "OPERATIONS TEAM"
     },
     {
       id: 5,
@@ -59,9 +62,10 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/ea580c/ffffff?text=MAC",
       backgroundImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "Updating 10,000 courses? Totally doable now. The scalability is unmatched in the industry.",
+      quote: "Updating 10,000 courses? Totally doable now. The scalability is unmatched.",
       speaker: "Lisa Rodriguez",
-      jobTitle: "Senior Training Manager"
+      jobTitle: "Senior Training Manager",
+      category: "TRAINING"
     },
     {
       id: 6,
@@ -69,9 +73,76 @@ const Index = () => {
       logo: "https://via.placeholder.com/120x40/0891b2/ffffff?text=MSG",
       backgroundImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      quote: "100 hours of compliance training done in 10 minutes! The efficiency gains are remarkable.",
+      quote: "100 hours of compliance training done in 10 minutes! Efficiency gains are remarkable.",
       speaker: "Robert Kim",
-      jobTitle: "Compliance Director"
+      jobTitle: "Compliance Director",
+      category: "COMPLIANCE"
+    },
+    {
+      id: 7,
+      company: "Medicare Innovations",
+      logo: "https://via.placeholder.com/120x40/7c2d12/ffffff?text=MI",
+      backgroundImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "The AI-powered features have transformed our training delivery. Our agents are more engaged and retention rates have soared.",
+      speaker: "Amanda Foster",
+      jobTitle: "Training Innovation Lead",
+      category: "AI TRAINING"
+    },
+    {
+      id: 8,
+      company: "Medicare Central",
+      logo: "https://via.placeholder.com/120x40/be123c/ffffff?text=MC",
+      backgroundImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "Implementation was seamless and our team was up and running in days, not weeks. The support is outstanding.",
+      speaker: "James Wilson",
+      jobTitle: "Chief Technology Officer",
+      category: "IMPLEMENTATION"
+    },
+    {
+      id: 9,
+      company: "Medicare Pro",
+      logo: "https://via.placeholder.com/120x40/0d9488/ffffff?text=MP",
+      backgroundImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "The analytics dashboard gives us insights we never had before. Data-driven training decisions have improved our outcomes by 60%.",
+      speaker: "Rachel Green",
+      jobTitle: "Analytics Director",
+      category: "ANALYTICS"
+    },
+    {
+      id: 10,
+      company: "Medicare Elite",
+      logo: "https://via.placeholder.com/120x40/9333ea/ffffff?text=ME",
+      backgroundImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "Customer satisfaction scores have never been higher. The training platform has elevated our entire organization.",
+      speaker: "Mark Stevens",
+      jobTitle: "Customer Success Manager",
+      category: "CUSTOMER SUCCESS"
+    },
+    {
+      id: 11,
+      company: "Medicare Dynamics",
+      logo: "https://via.placeholder.com/120x40/c2410c/ffffff?text=MD",
+      backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "The mobile-first approach means our field agents can access training anywhere. Game-changing for our business model.",
+      speaker: "Patricia Lee",
+      jobTitle: "Field Operations Director",
+      category: "MOBILE TRAINING"
+    },
+    {
+      id: 12,
+      company: "Medicare Vision",
+      logo: "https://via.placeholder.com/120x40/0f766e/ffffff?text=MV",
+      backgroundImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      quote: "Integration with our existing systems was flawless. The platform works seamlessly with our CRM and sales tools.",
+      speaker: "Kevin Park",
+      jobTitle: "Integration Specialist",
+      category: "SYSTEM INTEGRATION"
     }
   ];
 
@@ -187,10 +258,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Train, market and sell like a Fortune 100 company
+              Empower your Medicare business with proven strategies.
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how leading Medicare professionals transform their expertise with our comprehensive training platform.
+              Our training platform helps agents stay ahead of industry changes, connect with clients more effectively, and grow their book of business with confidence.
             </p>
           </div>
           
@@ -202,18 +273,137 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Newsletter Section - Single Signup */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Stay Informed with Our Newsletter
+      {/* Newsletter CTA Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Button
+            onClick={() => {
+              const newsletterSection = document.getElementById('newsletter-section');
+              if (newsletterSection) {
+                newsletterSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Stay Informed with Our Newsletter
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Top Tutors Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Meet Our Top Tutors
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Get the latest Medicare updates, training materials, and exclusive content delivered directly to your inbox.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn from industry experts with years of Medicare experience and proven track records in training successful agents.
             </p>
           </div>
-          <NewsletterSignup />
+
+          <div className="space-y-20">
+            {/* Tutor 1 - Image Left, Description Right */}
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Jay Martinez - Senior Medicare Training Specialist"
+                    className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                    style={{ objectPosition: "50% 20%" }} 
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-lg">
+                    8+ Years Experience
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/2 space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-foreground mb-2">Jay Martinez</h3>
+                  <p className="text-xl text-primary font-semibold">Senior Medicare Training Specialist</p>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Jay brings over 8 years of Medicare expertise to our training programs. Known for his engaging, thorough approach, 
+                  he ensures every agent has a solid understanding of Medicare fundamentals. His patient and professional demeanor 
+                  makes complex topics accessible to agents at all experience levels.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Medicare Advantage</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Supplement Plans</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Compliance Training</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Tutor 2 - Description Left, Image Right */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Sarah Johnson - Medicare Sales Expert"
+                    className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                    style={{ objectPosition: "70% 10%" }} 
+                  />
+                  <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-lg">
+                    Top Rated Trainer
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/2 space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-foreground mb-2">Sarah Johnson</h3>
+                  <p className="text-xl text-primary font-semibold">Medicare Sales Expert & Trainer</p>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Sarah specializes in sales techniques and customer relationship management for Medicare agents. With a proven 
+                  track record of training top-performing agents, she focuses on practical strategies that drive results. Her 
+                  interactive training style helps agents build confidence and close more sales effectively.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Sales Techniques</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Customer Relations</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Lead Generation</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Tutor 3 - Image Left, Description Right */}
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Michael Chen - Technology Integration Specialist"
+                    className="w-full h-96 object-cover object-center rounded-2xl shadow-lg"
+                    style={{ objectPosition: "50% 10%" }} 
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-lg">
+                    AI Training Pioneer
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/2 space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-foreground mb-2">Michael Chen</h3>
+                  <p className="text-xl text-primary font-semibold">Technology Integration Specialist</p>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Michael leads our AI-powered training initiatives and helps agents leverage technology for better outcomes. 
+                  He combines deep Medicare knowledge with cutting-edge training methodologies to create engaging, effective 
+                  learning experiences. His expertise in digital tools helps agents stay ahead in the evolving Medicare landscape.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">AI Training Tools</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Digital Marketing</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">CRM Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

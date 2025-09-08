@@ -134,7 +134,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
             <Button 
               type="submit" 
               disabled={isSubmitting}
-              className="bg-blue-600 hover:bg-blue-700 text-white shrink-0"
+              className="bg-gray-900 hover:bg-black text-white shrink-0"
             >
               {isSubmitting ? (
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -180,7 +180,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
               type="submit" 
               disabled={isSubmitting}
               size="sm"
-              className="w-full"
+              className="w-full bg-gray-800 hover:bg-gray-900 text-white"
             >
               {isSubmitting ? (
                 <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white"></div>
@@ -195,34 +195,32 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
   }
 
   return (
-    <div className={`${className} bg-card backdrop-blur-sm border border-border rounded-2xl shadow-card p-8`}>
-      <div className="text-center mb-8">
-        <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <Mail className="h-8 w-8 text-primary-foreground" />
-        </div>
-        <h3 className="text-2xl font-bold text-foreground mb-2">
-          Stay Informed with Our Newsletter
-        </h3>
-        <p className="text-muted-foreground">
-          Get the latest Medicare updates, training materials, and exclusive content delivered directly to your inbox.
-        </p>
+    <div className={`${className} text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg`}>
+      <div className="flex justify-center mb-3">
+        <Mail className="h-8 w-8 text-primary-glow" />
       </div>
+      <h3 className="text-xl font-bold text-white mb-2">
+        Stay Informed with Our Newsletter
+      </h3>
+      <p className="text-white/80 font-medium mb-6">
+        Get the latest Medicare updates, training materials, and exclusive content delivered directly to your inbox.
+      </p>
       
-      <form onSubmit={handleSubscribe} className="space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <form onSubmit={handleSubscribe} className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Input
             type="text"
             placeholder="First Name (optional)"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            className="border-border focus:border-primary focus:ring-primary rounded-xl"
+            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-primary-glow focus:ring-primary-glow rounded-xl"
           />
           <Input
             type="text"
             placeholder="Last Name (optional)"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            className="border-border focus:border-primary focus:ring-primary rounded-xl"
+            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-primary-glow focus:ring-primary-glow rounded-xl"
           />
         </div>
         <div className="flex gap-3">
@@ -232,15 +230,15 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 border-border focus:border-primary focus:ring-primary rounded-xl"
+            className="flex-1 bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-primary-glow focus:ring-primary-glow rounded-xl"
           />
           <Button 
             type="submit" 
             disabled={isSubmitting}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 shrink-0"
+            className="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 shrink-0"
           >
             {isSubmitting ? (
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-foreground"></div>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
             ) : (
               <>
                 Subscribe <ArrowRight className="h-4 w-4 ml-2" />
@@ -250,7 +248,7 @@ const NewsletterSignup = ({ variant = 'default', className = '' }: NewsletterSig
         </div>
       </form>
       
-      <p className="text-xs text-muted-foreground text-center mt-6">
+      <p className="text-xs text-white/60 text-center mt-4">
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>
